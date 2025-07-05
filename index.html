@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive E-Commerce Website</title>
+    <!-- Link with Css-->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon " href="fav-icon.png" />
+    <!-- Link with box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundel.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <header>
+      <a href="#" class="logo"><i class="bx bxs-t-shirt"></i> adike</a>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#new">New Arrival</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#wishlist">Wish List</a></li>
+      </ul>
+      <!-- Header ICONS -->
+      <div class="header-icons">
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <i class="bx bx-search" id="search-icon"></i>
+        <i class="bx bx-cart-alt" id="cart-icon"></i>
+        <i class="bx bx-user" id="user-icon"></i>
+      </div>
+      <!-- Search Box -->
+      <div class="search-box">
+        <input type="search" name="" id="" placeholder="Search Here..." />
+      </div>
+      <a href="login.html" class="login-btn">Login</a>
+
+      <!-- Cart Box -->
+      <div class="cart">
+        <!-- Box 1 -->
+        <div class="box">
+          <img src="new1.png" />
+          <div class="text">
+            <h3>T-Shirt 14A</h3>
+            <span>$50.05</span>
+            <span>x1</span>
+          </div>
+          <i class="bx bxs-trash-alt"></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="box">
+          <img src="new2.png" />
+          <div class="text">
+            <h3>T-Shirt 14A</h3>
+            <span>$50.05</span>
+            <span>x1</span>
+          </div>
+          <i class="bx bxs-trash-alt"></i>
+        </div>
+
+        <h2>Total: $100.10</h2>
+        <a href="#" class="btn">Checkout</a>
+      </div>
+      <!-- User -->
+      <div class="user">
+        <h2>Login Now</h2>
+        <input type="email" name="" id="" placeholder="Your Email..." />
+        <input type="password" name="" id="" placeholder="Password" />
+        <input type="submit" value="Login" class="login-btn" />
+        <p>Forget Password <a href="#">Reset Now</a></p>
+        <p>Don't have acoount <a href="#">Create account</a></p>
+      </div>
+    </header>
+    <section class="home" id="home">
+      <div class="home-text">
+        <span>Shop Now</span>
+        <h1>New Arrival of <br />Fresh Products</h1>
+        <a href="#" class="btn">Shop Now</a>
+      </div>
+      <div class="home-img">
+        <img src="home.png" />
+      </div>
+    </section>
+    <!-- New Arrival Section -->
+
+    <section class="new" id="new">
+      <div class="heading">
+        <h1>New <span>Arrival</span></h1>
+      </div>
+      <div class="swiper new-arrival">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="new1.png" />
+            <div class="content">
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="new2.png" />
+            <div class="content">
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="new3.png" />
+            <div class="content">
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="new4.png" />
+            <div class="content">
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="new5.png" />
+            <div class="content">
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="new6.png" />
+            <div class="content">
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="new7.png" />
+            <div class="content">
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Product -->
+    <section class="product" id="product">
+      <div class="heading">
+        <h1>Our <span>Products</span></h1>
+      </div>
+      <div class="product-container">
+        <div class="box" data-id="1">
+          <img src="p1.jpg" />
+          <div class="content">
+            <h2>T-Shirt 13A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 2000.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p2.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1500.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p3.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 2500.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p4.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1400.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p5.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1850.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p6.png" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 2000.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p7.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1800.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p8.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 2100.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p9.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1900.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p10.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1800.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p11.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1500.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+        <div class="box" data-id="1">
+          <img src="p12.jpg" />
+          <div class="content">
+            <h2>T-Shirt 14A</h2>
+            <div class="stars">
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star"></i>
+              <i class="bx bxs-star-half"></i>
+            </div>
+          </div>
+          <span>INR 1500.00</span>
+          <i class="bx bx-cart-alt"></i>
+          <i class="bx bx-heart wishlist-icon"></i>
+          <!-- Wishlist Button -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+      <div class="heading">
+        <h1>Our <span>Customer's</span></h1>
+      </div>
+      <div class="reviews-container">
+        <div class="box">
+          <img src="r1.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>
+            ✅ Comfort: Lightweight yet warm, feels great for all-day wear. ✅
+            Price: Slightly expensive but justifiable for the quality.
+          </p>
+          <!-- <h2>Anupam mittal</h2> -->
+          <h2>Rohan Kaule</h2>
+        </div>
+        <div class="box">
+          <img src="r2.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>
+            ✅ Comfort: Soft fabric, comfy fit, ideal for any season. ✅ Price:
+            Decent value for a premium brand.
+          </p>
+          <!-- <h2>Namita Thapar</h2> -->
+          <h2>Navin Jaiswar</h2>
+        </div>
+        <div class="box">
+          <img src="r3.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>
+            ✅ Comfort : Soft and cozy, perfect for everyday wear.
+             ✅ Price : A bit premium, but worth
+            it for the brand and durability.
+          </p>
+          <!-- <h2>Aman Gupta</h2> -->
+          <h2>Om Mankar</h2>
+        </div>
+        <div class="box">
+          <img src="r4.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star-half"></i>
+          </div>
+          <p>
+            ✅ Comfort: Soft fabric, comfy fit, ideal for any season.
+
+            ✅ Price: Decent value for a premium brand.
+          </p>
+          <!-- <h2>Rohit Sharma</h2> -->
+          <h2>Prashik Rokade</h2>
+        </div>
+        <div class="box">
+          <img src="r5.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            ✅ Comfort : Soft and cozy, perfect for everyday wear. Keeps you warm without feeling too heavy.
+
+✅              Price : A bit premium, but worth it for the brand and durability.
+          </p>
+          <!-- <h2>Cristiano ronaldo</h2> -->
+          <h2>Abhishek Thakur</h2>
+        </div>
+        <div class="box">
+          <img src="r6.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            ✅ Comfort : Soft and cozy, perfect for everyday wear. Keeps you warm without feeling too heavy.
+
+✅              Price : A bit premium, but worth it for the brand and durability.
+          </p>
+          <h2>Gandharv Kumbhare</h2>
+        </div>
+        <div class="box">
+          <img src="r7.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            ✅ Comfort : Soft and cozy, perfect for everyday wear. Keeps you warm without feeling too heavy.
+
+✅              Price : A bit premium, but worth it for the brand and durability.
+          </p>
+          <h2>Adarsh Kate</h2>
+           <!-- <h2>Vaibhavi Kode</h2> -->
+           <!-- <h2>KL Rahul</h2> -->
+        </div>
+        <div class="box">
+          <img src="r8.png.png.jpg" />
+          <div class="stars">
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+            <i class="bx bxs-star"></i>
+          </div>
+          <p>
+            ✅ Comfort : Soft and cozy, perfect for everyday wear. Keeps you warm without feeling too heavy.
+
+✅              Price : A bit premium, but worth it for the brand and durability.
+          </p>
+          <!-- <h2>Shahid Kapoor</h2> -->
+          <!-- <h2>Roshani Vanare</h2> -->
+           <h2>Sanchit Mishra</h2>
+        </div>
+        
+      </div>
+    </section>
+    <section class="wishlist" id="wishlist">
+        <div class="heading">
+            <h1>My <span>Wishlist</span></h1>
+        </div>
+        <div class="wishlist-items"></div> <!-- Keep only one -->
+        <div class="wishlist-items"></div> <!-- Keep only one -->
+       
+    </section>
+    
+
+
+
+
+    <!-- FOOTER -->
+    <section class="footer">
+      <div class="footer-box">
+        <h2>adike</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores
+          nobis molestias itaque voluptas. Debitis, repellendus!
+        </p>
+        <div class="social">
+          <a href="#"><i class="bx bxl-facebook"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-box">
+        <h3>Support</h3>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Help & Support</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Terms Of Use</a></li>
+        <li><a href="#">FAQ</a></li>
+      </div>
+      <div class="footer-box">
+        <h3>Our Branches</h3>
+        <li><a href="#">Airoli</a></li>
+        <li><a href="#">Thane</a></li>
+        <li><a href="#">Bhandup</a></li>
+        <li><a href="#">Digha Gaon</a></li>
+        <li><a href="#">Panvel</a></li>
+      </div>
+      <div class="footer-box">
+        <h3>Payment Method</h3>
+        <div class="payment">
+          <img src="visa.png" />
+          <img src="mastercard.png" />
+          <img src="paypal.png" />
+          <img src="american-express.png" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>&#169; KunalIngale All Right Reversed.</p>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- link to js -->
+    <script src="main.js"></script>
+    <script src="wishlist.js"></script>
+  </body>
+</html>

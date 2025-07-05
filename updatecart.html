@@ -1,0 +1,203 @@
+ <!-- function updateCartUI() {
+     cartItemsContainer.innerHTML = '<h2>Shopping Cart</h2>';
+     cartItems.forEach(item => {
+         let div = document.createElement('div');
+         div.classList.add('box');
+         div.innerHTML = `
+              <img src="${item.img}" alt="${item.name}">
+              <div class="text">
+                  <h3>${item.name}</h3>
+                  <span>${item.price}</span>
+                  <span>x${item.quantity}</span>
+                  <button class="remove-cart" data-id="${item.id}">Remove</button>
+              </div>
+          `;
+
+
+
+        cartItemsContainer.appendChild(div);
+     });
+    
+    document.querySelectorAll('.remove-cart').forEach(button => {
+         button.addEventListener('click', (e) => {
+             let id = e.target.getAttribute('data-id');
+             let itemIndex = cartItems.findIndex(item => item.id === id);
+             if (itemIndex !== -1) {
+                 if (cartItems[itemIndex].quantity > 1) {
+                     cartItems[itemIndex].quantity -= 1;
+                } else {
+                     cartItems.splice(itemIndex, 1);
+                 }
+                 localStorage.setItem('cart', JSON.stringify(cartItems));
+                 updateCartUI();
+             }
+         });
+     });
+ } -->
+
+
+
+
+<!-- Get the current page name
+const currentPage = window.location.pathname.split('/').pop();
+
+// Redirect to login if not authenticated and not already on login page
+if (!localStorage.getItem('isLoggedIn') && currentPage !== "login.html") {
+    window.location.href = "login.html";
+}
+
+// Handle login form submission
+document.addEventListener('DOMContentLoaded', function () {
+    let loginForm = document.querySelector('.sign-in form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            let email = document.querySelector('input[type="email"]').value.trim();
+            let password = document.querySelector('input[type="password"]').value.trim();
+
+            // Dummy credentials (Replace with database authentication later)
+            if (email === "admin@example.com" && password === "password123") {
+                alert('Login successful!');
+                localStorage.setItem('isLoggedIn', 'true');
+                window.location.href = "index.html"; // Redirect to home page
+            } else {
+                alert('Invalid email or password. Try again.');
+            }
+        });
+    }
+});
+
+// Logout functionality
+document.addEventListener('DOMContentLoaded', function () {
+    let logoutBtn = document.querySelector('#logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function () {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = "login.html";
+        });
+    }
+}); -->
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- // Wishlist Functionality
+let wishlistContainer = document.querySelector('.wishlist-items');
+let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+updateWishlistUI();
+
+document.querySelectorAll('.wishlist-icon').forEach(button => {
+    button.addEventListener('click', (e) => {
+        let product = e.target.closest('.box');
+        let productId = product.getAttribute('data-id') || Date.now().toString();
+        let productImg = product.querySelector('img').src;
+        let productName = product.querySelector('h2').innerText;
+        let productPrice = product.querySelector('span').innerText;
+        
+        let existingItem = wishlist.find(item => item.id === productId);
+        if (!existingItem) {
+            let item = { id: productId, img: productImg, name: productName, price: productPrice };
+            wishlist.push(item);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            updateWishlistUI();
+            alert("Added to Wishlist!");
+        } else {
+            alert("Item is already in Wishlist!");
+        }
+    });
+});
+
+function updateWishlistUI() {
+    wishlistContainer.innerHTML = '';
+    if (wishlist.length === 0) {
+        wishlistContainer.innerHTML = '<p>Your wishlist is empty.</p>';
+        return;
+    }
+    wishlist.forEach(item => {
+        let div = document.createElement('div');
+        div.classList.add('wishlist-item');
+        div.innerHTML = `
+            <img src="${item.img}" alt="${item.name}">
+            <div class="details">
+                <h3>${item.name}</h3>
+                <span>${item.price}</span>
+                <button class="remove-wishlist" data-id="${item.id}">Remove</button>
+            </div>
+        `;
+        wishlistContainer.appendChild(div);
+    });
+    
+    document.querySelectorAll('.remove-wishlist').forEach(button => {
+        button.addEventListener('click', (e) => {
+            let id = e.target.getAttribute('data-id');
+            wishlist = wishlist.filter(item => item.id !== id);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            updateWishlistUI();
+        });
+    });
+}
+
+
+
+
+
+Wishlist Feature Implementation
+
+Select all wishlist buttons
+let wishlistButtons = document.querySelectorAll('.wishlist-icon');
+let wishlistContainer = document.querySelector('.wishlist-items');
+
+// Load wishlist from localStorage
+let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+updateWishlistUI();
+
+wishlistButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        let product = e.target.closest('.box');
+        let productId = product.getAttribute('data-id');
+        let productImg = product.querySelector('img').src;
+        let productName = product.querySelector('h2').innerText;
+        let productPrice = product.querySelector('span').innerText;
+
+        let item = { id: Date.now().toString(), img: productImg, name: productName, price: productPrice };
+
+        wishlist.push(item);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+        updateWishlistUI();
+    });
+});
+
+// Update Wishlist UI
+function updateWishlistUI() {
+    wishlistContainer.innerHTML = '';
+    wishlist.forEach(item => {
+        let div = document.createElement('div');
+        div.classList.add('wishlist-item');
+        div.innerHTML = `
+            <img src="${item.img}" alt="${item.name}">
+            <div class="details">
+                <h3>${item.name}</h3>
+                <span>${item.price}</span>
+                <button class="remove-wishlist" data-id="${item.id}">Remove</button>
+            </div>
+        `;
+        wishlistContainer.appendChild(div);
+    });
+
+    document.querySelectorAll('.remove-wishlist').forEach(button => {
+        button.addEventListener('click', (e) => {
+            let id = e.target.getAttribute('data-id');
+            wishlist = wishlist.filter(p => p.id !== id);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            updateWishlistUI();
+        });
+    });
+} -->
